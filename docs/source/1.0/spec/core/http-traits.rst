@@ -641,9 +641,9 @@ Summary
 Trait selector
     .. code-block:: none
 
-        structure > :test(member > :test(string, blob, structure, union))
+        structure > :test(member > :test(string, blob, structure, union, document))
 
-    *Structure members that target a string, blob, structure, or union*
+    *Structure members that target a string, blob, structure, union, or document*
 Value type
     Annotation trait.
 Conflicts with
@@ -671,8 +671,8 @@ Serialization rules:
 
 #. When a string or blob member is referenced, the raw value is serialized
    as the body of the message.
-#. When a :ref:`structure` or :ref:`union` is targeted, the shape value
-   is serialized as a :ref:`protocol-specific <protocolDefinition-trait>`
+#. When a :ref:`structure`, :ref:`union`, or document is targeted, the shape
+   value is serialized as a :ref:`protocol-specific <protocolDefinition-trait>`
    document that is sent as the body of the message.
 
 
